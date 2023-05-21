@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Collections.Concurrent;
+using Microsoft.Extensions.Logging;
 
 namespace TestingUtils.Logging;
 
@@ -51,5 +52,32 @@ public class CapturingLoggerProvider : ILoggerProvider
       : _capturedLogStore != null
         ? new CapturingLogger(_capturedLogStore) {MinimumLogLevel = DefaultMinimumLogLevel}
         : new CapturingLogger {MinimumLogLevel = DefaultMinimumLogLevel};
+  }
+
+  /// <summary>
+  ///   Creates a <see cref="CapturingLoggerProvider" /> which uses <paramref name="logStore" /> to maintain a separate
+  ///   <see cref="ICapturedLogStore" /> for each logging <c>categoryName</c> (<see cref="ILoggerFactory.CreateLogger" />
+  ///   parameter).
+  /// </summary>
+  /// <remarks>
+  ///   When <see cref="ILogger{TCategoryName}" /> instances are created by a <see cref="ILoggerFactory" /> the
+  ///   <c>TCategoryName</c> generic type argument is used as the category name.
+  /// </remarks>
+  /// <param name="logStore">
+  ///   A dictionary to maintain log stores by category. Consider using a
+  ///   <see cref="ConcurrentDictionary{TKey,TValue}" />.
+  /// </param>
+  /// <returns></returns>
+  public static CapturingLoggerProvider FromDictionary(IDictionary<string, ICapturedLogStore> logStore)
+  {
+    return new CapturingLoggerProvider(category =>
+    {
+      if (!logStore.ContainsKey(category))
+      {
+        logStore[category] = new CapturedLogStore();
+      }
+
+      return logStore[category];
+    });
   }
 }
