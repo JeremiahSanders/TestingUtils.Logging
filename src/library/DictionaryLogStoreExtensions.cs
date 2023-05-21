@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace TestingUtils.Logging;
+namespace Jds.TestingUtils.Logging;
 
 /// <summary>
 ///   Extension methods on <see cref="IDictionary{TKey,TValue}" /> and <see cref="IReadOnlyDictionary{TKey,TValue}" />

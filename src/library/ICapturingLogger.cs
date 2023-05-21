@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace TestingUtils.Logging;
+namespace Jds.TestingUtils.Logging;
 
 /// <summary>
 ///   A <see cref="ILogger" /> which captures logged messages.

@@ -1,7 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using Xunit.Abstractions;
+﻿using Xunit.Abstractions;
 
-namespace TestingUtils.Logging.Tests.Unit;
+namespace Jds.TestingUtils.Logging.Tests.Unit;
 
 public class CapturingLoggerTests
 {

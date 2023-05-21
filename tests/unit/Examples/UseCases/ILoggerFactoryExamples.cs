@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using SimpleWebApi;
 using SimpleWebApi.Controllers;
 
-namespace TestingUtils.Logging.Tests.Unit.Examples.UseCases;
+namespace Jds.TestingUtils.Logging.Tests.Unit.Examples.UseCases;
 
 public static class ILoggerFactoryExamples
 {

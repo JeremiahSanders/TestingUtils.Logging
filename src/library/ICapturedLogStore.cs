@@ -1,4 +1,4 @@
-﻿namespace TestingUtils.Logging;
+﻿namespace Jds.TestingUtils.Logging;
 
 /// <summary>
 ///   A mutable <see cref="CapturedLog" /> store.

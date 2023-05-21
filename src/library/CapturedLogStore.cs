@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace TestingUtils.Logging;
+namespace Jds.TestingUtils.Logging;
 
 /// <summary>
 ///   Default implementation of <see cref="ICapturedLogStore" />.

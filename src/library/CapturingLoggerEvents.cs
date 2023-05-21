@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace TestingUtils.Logging;
+namespace Jds.TestingUtils.Logging;
 
 public static class CapturingLoggerEvents
 {
