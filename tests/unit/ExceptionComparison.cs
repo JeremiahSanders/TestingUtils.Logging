@@ -1,4 +1,4 @@
-﻿namespace TestingUtils.Logging.Tests.Unit;
+﻿namespace Jds.TestingUtils.Logging.Tests.Unit;
 
 internal static class ExceptionComparison
 {

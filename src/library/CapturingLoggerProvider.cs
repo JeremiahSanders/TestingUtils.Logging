@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
 
-namespace TestingUtils.Logging;
+namespace Jds.TestingUtils.Logging;
 
 /// <summary>
 ///   An <see cref="ILoggerProvider" /> which can be created with <see cref="ICapturedLogStore" />s to enable logged

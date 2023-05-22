@@ -1,6 +1,4 @@
-using Microsoft.Extensions.Logging;
-
-namespace TestingUtils.Logging.Tests.Unit;
+namespace Jds.TestingUtils.Logging.Tests.Unit;
 
 public class CapturingLoggerProviderTests
 {

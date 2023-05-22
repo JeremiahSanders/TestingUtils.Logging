@@ -1,7 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using SimpleWebApi;
+﻿using SimpleWebApi;
 
-namespace TestingUtils.Logging.Tests.Unit.Examples.UseCases;
+namespace Jds.TestingUtils.Logging.Tests.Unit.Examples.UseCases;
 
 /// <summary>
 ///   An example test use case which tests a type which depends upon <see cref="ILogger{TCategoryName}" />.
