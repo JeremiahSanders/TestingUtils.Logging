@@ -1,4 +1,4 @@
-# TestingUtils.Logging
+# TestingUtils.Logging ([NuGet][nuget-repository])
 
 Methods and types supporting the use of [`Microsoft.Extensions.Logging.Abstractions`][] (e.g., `ILogger` and `ILogger<>`) within unit and integration tests.
 
@@ -39,4 +39,5 @@ In this example, an ASP.NET Core API `Controller` performs logging of its reques
 [example-service-interface]: https://github.com/JeremiahSanders/TestingUtils.Logging/blob/dev/examples/example-webapi/IExampleService.cs
 [example-service-sut]: https://github.com/JeremiahSanders/TestingUtils.Logging/blob/dev/examples/example-webapi/ExampleService.cs
 [example-service-tests]: https://github.com/JeremiahSanders/TestingUtils.Logging/blob/dev/tests/unit/Examples/UseCases/ILoggerExamples.cs
+[nuget-repository]: https://www.nuget.org/packages/Jds.TestingUtils.Logging
 [unit testing]: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
