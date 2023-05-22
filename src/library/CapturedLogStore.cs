@@ -41,7 +41,7 @@ public class CapturedLogStore : ICapturedLogStore
   {
     lock (_concurrentUpdateLocker)
     {
-      return _logDestination.GetEnumerator();
+      return new List<CapturedLog>(_logDestination).GetEnumerator();
     }
   }
 
