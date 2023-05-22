@@ -53,6 +53,26 @@ public class CapturingLoggerTests
   }
 
   [Fact]
+  public void LoggingCanOccurDuringEnumeration()
+  {
+    // Arrange
+    _logger.LogInformation("1");
+    _logger.LogWarning("2");
+    const string additionalLog = "3";
+
+    // Act
+    foreach (var _ in _logger.Logs)
+    {
+      _logger.LogTrace(additionalLog);
+    }
+
+    // Assert
+    const int expectedCount = 2;
+    var actualCount = _logger.Logs.Count(item => item.Message == additionalLog);
+    Assert.Equal(expectedCount, actualCount);
+  }
+
+  [Fact]
   public void LogsScopes()
   {
     const string expectedScope = "an expected scope";
