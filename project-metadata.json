@@ -2,7 +2,7 @@
   "name": "testing-utils-logging",
   "description": "A library supporting logging during unit testing and integration testing.",
   "title": "TestingUtils.Logging",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "ciEnvironment": {
     "variables": [
       {
